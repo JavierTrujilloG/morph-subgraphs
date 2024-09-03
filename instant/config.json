@@ -1,0 +1,18 @@
+{
+  "version": "1", 
+  "name": "Transfers",
+  "abis": {
+    "Transfers": {
+      "path": "./usdt-erc20.abi.json"
+    }
+  },
+  "chains": ["morph-testnet"],
+  "instances": [
+    {
+      "abi": "Transfers", 
+      "address": "0x9E12AD42c4E4d2acFBADE01a96446e48e6764B98", 
+      "startBlock": 7791164, 
+      "chain": "morph-testnet"
+    }
+  ]
+}

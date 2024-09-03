@@ -1,0 +1,26 @@
+specVersion: 0.0.5
+schema:
+  file: schema.graphql
+dataSources:
+  - kind: ethereum
+    name: usdt
+    network: morph-testnet
+    source:
+      address: "0x9E12AD42c4E4d2acFBADE01a96446e48e6764B98"
+      abi: ERC20
+      startBlock: 7791164
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Token
+        - Account
+        - TokenBalance
+      abis:
+        - name: ERC20
+          file: usdt/abis/ERC20.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: usdt/usdt.wasm
