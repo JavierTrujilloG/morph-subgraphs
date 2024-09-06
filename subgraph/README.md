@@ -1,15 +1,17 @@
 # Subgraph 101
 
-## Basic subgraph with `graph init`
+## Deploying ERC-20 subgraph to Goldsky
 
-We'll be indexing an [ERC-20 token contract](https://explorer-holesky.morphl2.io/token/0x9E12AD42c4E4d2acFBADE01a96446e48e6764B98) on Morph Holesky.
+We'll be indexing [Morph USDT token contract](https://explorer-holesky.morphl2.io/token/0x9E12AD42c4E4d2acFBADE01a96446e48e6764B98) on Morph Holesky.
 
-What you'll need for your own:
+The subgraph is already build, all you need to do is to deploy it onto Goldsky with the following command:
+`goldsky subgraph deploy usdt-morph-balances/1.0.0`
+
+Alternatively, you can easily use this subgraph code to index any other ERC-20 contract by changing in the `subgraph.yaml`:
 - Contract Address
-- ABI
 - Start Block
 
-Caveat: Morph Holesky isn't included in The Graph CLI's list of supported networks so some manual editing is needed.
+Run `graph codegen` and `graph build` before deploying the subgraph.
 
 All of the code for this example was borrowed from [Chainstack](https://docs.chainstack.com/docs/subgraphs-tutorial-indexing-erc-20-token-balance).
 
