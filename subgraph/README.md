@@ -2,10 +2,10 @@
 
 ## Deploying ERC-20 subgraph to Goldsky
 
-We'll be indexing [Morph USDT token contract](https://explorer-holesky.morphl2.io/token/0x9E12AD42c4E4d2acFBADE01a96446e48e6764B98) on Morph Holesky.
+We'll be indexing [BitgetToken (BGBT) token contract](https://explorer.morphl2.io/token/0x55d1f1879969bdbB9960d269974564C58DBc3238) on Morph Mainnet.
 
 The subgraph is already build, all you need to do is to deploy it onto Goldsky with the following command:
-`goldsky subgraph deploy usdt-morph-balances/1.0.0`
+`goldsky subgraph deploy morph-balances/1.0.0`
 
 Alternatively, you can easily use this subgraph code to index any other ERC-20 contract by changing in the `subgraph.yaml`:
 - Contract Address
